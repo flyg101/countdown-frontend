@@ -1,13 +1,112 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Helvetica;
+  margin: 0px;
+  overflow: scroll;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container {
+  max-width: 1000px;
+}
+
+.timer {
+  opacity: 0.5;
+  font-size: 38px;
+  text-align: center;
+  margin: 15px;
+  color: #00648f;
+}
+
+.timer.fail {
+  color: #ff0000;
+}
+
+.title {
+  color: #00648f;
+  text-align: center;
+}
+
+.title h3 {
+  font-size: 38px;
+  margin: 10px;
+}
+
+.title h6 {
+  font-size: 32px;
+  margin: 15px 0px 50px;
+}
+
+.letterbox {
+  display: inline-block;
+  border: 4px solid #343a40;
+  min-height: 140px;
+  min-width: 100px;
+  padding: 10px;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.letterbox.wrong {
+  border: 4px solid #ff0000;
+  opacity: 0.4;
+}
+
+.letterbox.correct {
+  border: 4px solid #6cbc36;
+}
+
+.letterbox .letter {
+  font-size: 96px;
+  color: #009680;
+  text-align: center;
+}
+
+.letterbox.disabled {
+  opacity: 0.4;
+}
+
+.finished .letterbox {
+  pointer-events: none;
+}
+
+.wrong-prompt {
+  display: block;
+  color: #ff0000;
+  font-size: 10px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #eee;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.feedback {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.feedback .fail {
+  font-size: 38px;
+  color: #03b3ff;
+  text-align: center;
+}
+
+.feedback h6 {
+  margin: 10px;
 }
