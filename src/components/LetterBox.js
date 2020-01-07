@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
 
@@ -40,3 +41,7 @@ export default function LetterBox({ letter, index, filled, correct, selected, or
     </div>
   );
 }
+
+LetterBox.propTypes = {
+  letter: PropTypes.string.isRequired,
+};

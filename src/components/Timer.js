@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
 
@@ -36,3 +37,9 @@ export default class Timer extends Component {
     );
   }
 }
+
+Timer.propTypes = {
+  finished: PropTypes.bool,
+  success: PropTypes.bool,
+  onEndTimer: PropTypes.func.isRequired,
+};
